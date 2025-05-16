@@ -1,8 +1,18 @@
-import express from "express";
-import { register } from "../controllers/user.controller.js";
+import { Router } from "express";
+import * as userController from "./user.controller.js";
 
-const router = express.Router();
+const router = Router();
 
-router.post("/register", register);
+router.get("/:id",  userController.getCurrentUser);
+
+router.post("/createEmergencyContact", userController.createEmergencyContact);
+
+
+router.put("/emergency-contact", userController.updateEmergencyContact);
+
+
+router.get("/emergency-contact/:userId/:contactId", userController.getEmergencyContact);
+
+router.delete("/emergency-contact/:userId/:contactId", userController.deleteEmergencyContact);
 
 export default router;

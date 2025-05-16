@@ -1,58 +1,71 @@
-import  { Schema,model ,mongoose} from "mongoose";
+import { Schema, model, mongoose } from "mongoose";
 
 const userSchema = new Schema(
+
     {
 
         userName: {
             type: String,
-            requiered: true,
+            required: true,
             min: 3,
             max: 50,
         },
         email: {
             type: String,
-            requiered: true,
+            required: true,
             unique: true,
         },
         password: {
             type: String,
-            requiered: true,
+            required: true,
             min: 4,
         },
         image: {
             type: Object,
-           
+
         },
         phone: {
             type: String,
         },
-         adderess: {
+        adderess: {
             type: String,
         },
-          confirmEmail: {
+        confirmEmail: {
             type: Boolean,
-            default:false,
+            default: false,
         },
         sendCode: {
             type: String,
-            default:null,
+            default: null,
         },
-         gender: {
+        gender: {
             type: String,
-            enum:['male','female'],
+            enum: ['male', 'female'],
         },
-        status:{
-             type: String,
-            enum:['active',' not_active'],
+        status: {
+            type: String,
+            enum: ['active', 'not_active'],
         },
-       role:{
-             type: String,
-            enum:['admin',' user'],
-        },
+
+
+
+
+        emergencyContacts: [
+            {
+                  // 
+                name: { type: String, required: true },             // 
+                relationship: { type: String },
+                phone: { type: String },
+                email: { type: String },
+            }
+        ]
+
     },
 
 
-   
+
+
+
 
 
 
@@ -65,5 +78,5 @@ const userSchema = new Schema(
 
 
 
- const userModel = mongoose.models.User|| model('User',userSchema);
- export default userModel;
+const userModel = mongoose.models.User || model('User', userSchema);
+export default userModel;

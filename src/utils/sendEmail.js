@@ -16,7 +16,7 @@ export async function sendEmail(to, subject, html) {
 
 
 
-            pass: "kitw uiyp hsuv ehtx",
+            pass: 'ynmf wxuf dglu qaqs',
 
 
 
@@ -33,12 +33,13 @@ export async function sendEmail(to, subject, html) {
 
         from: ' "MediTrack" <${process.env.SENDER_EMAIL}>',
 
-        to, // List of receivers
+        to:to, // List of receivers
 
-        subject, // Subject Line
+        subject:subject, // Subject Line
 
-        html,
+        html:html,
     });
-
+   
+    return info ;
 
 }
