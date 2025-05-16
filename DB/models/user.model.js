@@ -51,14 +51,11 @@ const userSchema = new Schema(
 
 
 
-        
-
-
 
         emergencyContacts: [
             {
                   // 
-                name: { type: String, required: true },             // 
+                name: { type: String, required: true },               
                 relationship: { type: String },
                 phone: { type: String },
                 email: { type: String },

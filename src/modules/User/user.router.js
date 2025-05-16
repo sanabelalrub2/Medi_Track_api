@@ -8,9 +8,9 @@ router.get("/:id",  userController.getCurrentUser);
 router.post("/createEmergencyContact", userController.createEmergencyContact);
 
 
+
+
 router.put("/emergency-contact", userController.updateEmergencyContact);
-
-
 
 
 router.get("/emergency-contact/:userId/:contactId", userController.getEmergencyContact);
