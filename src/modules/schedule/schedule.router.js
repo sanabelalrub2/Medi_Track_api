@@ -6,7 +6,7 @@
 
 
 
-
+/*
 
 
 
@@ -36,9 +36,9 @@ router.delete("/deleteSchedule/:id", auth, controller.deleteSchedule);
 router.get("/getTodaySchedules", auth, controller.getTodaySchedules);
 
 export default router;
+*/
 
 
-/*
 import { Router } from "express";
 import * as controller from "./schedule.controller.js";
 
@@ -52,4 +52,3 @@ router.delete("/deleteSchedule/:id", controller.deleteSchedule);
 router.get("/getTodaySchedules", controller.getTodaySchedules);
 
 export default router;
-*/

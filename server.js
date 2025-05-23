@@ -5,6 +5,12 @@ import authRouter from "./src/modules/auth/auth.router.js";
 import userRouter from "./src/modules/User/user.router.js";
 import medicationRouter  from "./src/modules/medication/medication.router.js";
 import scheduleRouter from "./src/modules/schedule/schedule.router.js";
+import medicationTakenRouter from "./src/modules/medicationTaken/medicationTaken.router.js";
+import reportRouter from "./src/modules/report/report.router.js";
+
+
+
+
 dotenv.config();
 
 const app = express();
@@ -23,6 +29,9 @@ app.use('/auth', authRouter);
 app.use('/User', userRouter);
 app.use('/medication', medicationRouter);
 app.use("/schedule", scheduleRouter);
+app.use("/medicationTaken", medicationTakenRouter);
+app.use("/report", reportRouter);
+
 
 const PORT = 1110;
 app.listen(PORT, () => {
